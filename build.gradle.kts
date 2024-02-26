@@ -21,11 +21,21 @@ repositories {
 	maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
+val commonsLangVersion = "3.14.0"
+val kotlinLoggingVersion = "4.0.0-beta-2"
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	// [COMMON-UTILS]
+	implementation("org.apache.commons:commons-lang3:$commonsLangVersion")
+
+	// [KLOGGER]
+	implementation("io.github.microutils:kotlin-logging:$kotlinLoggingVersion")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
