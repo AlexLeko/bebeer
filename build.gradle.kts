@@ -1,3 +1,4 @@
+import org.gradle.api.JavaVersion.VERSION_21
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -11,7 +12,7 @@ group = "com.alexleko"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = VERSION_21
 }
 
 repositories {
@@ -22,6 +23,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
